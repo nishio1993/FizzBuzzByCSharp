@@ -1,4 +1,4 @@
-﻿for (int i = 1; i < 101; i++)
+﻿foreach(int i in Enumerable.Range(1, 100))
 {
     if (i % 15 == 0)
     {
