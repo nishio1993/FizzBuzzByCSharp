@@ -1,11 +1,7 @@
-﻿foreach(int i in Enumerable.Range(1, 100))
-{
-    var str = (i % 3, i % 5) switch
-    {
-        (0, 0) => "FizzBuzz",
-        (0, _) => "Fizz",
-        (_, 0) => "Buzz",
-        _ => i.ToString()
-    };
-    Console.WriteLine(str);
-}
+﻿Enumerable.Range(1, 100)
+    .Select(i => i % 15 == 0 ? "FizzBuzz" :
+    i % 3 == 0 ? "Fizz" :
+    i % 5 == 0 ? "Buzz" :
+    i.ToString())
+    .ToList()
+    .ForEach(i => Console.WriteLine(i));
